@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASL Alphabet Teacher</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="feedback/feedback.css">
+  <link rel="stylesheet" href="feedback/progress-bar.css">
+  <link rel="stylesheet" href="feedback/feedback-text.css">
+</head>
+<body>
+  <main class="app">
+    <div class="stage-wrap">
+      <section id="stage" class="stage">
+        <video id="video" autoplay playsinline muted disablepictureinpicture></video>
+        <div id="flash" class="flash"></div>
+        <p id="status" class="status" hidden></p>
+
+        <div id="feedback" class="feedback"></div>
+      </section>
+    </div>
+
+    <aside class="controls">
+      <button id="shutter" class="shutter" aria-label="Take photo" title="Take photo (Space)" disabled></button>
+      <button id="thumb" class="thumb" aria-label="View photos" title="View photos" disabled>
+        <img id="thumb-img" alt="">
+      </button>
+    </aside>
+  </main>
+
+  <div id="viewer" class="viewer" hidden>
+    <button id="viewer-close" class="viewer-close" aria-label="Close">&times;</button>
+    <button id="viewer-prev" class="viewer-nav prev" aria-label="Previous photo">&lsaquo;</button>
+    <canvas id="viewer-canvas" aria-label="Captured photo with hand landmarks"></canvas>
+    <button id="viewer-next" class="viewer-nav next" aria-label="Next photo">&rsaquo;</button>
+    <p id="viewer-count" class="viewer-count"></p>
+  </div>
+
+  <canvas id="canvas" hidden></canvas>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

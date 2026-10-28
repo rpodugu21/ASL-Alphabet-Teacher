@@ -1,0 +1,13 @@
+/* Panel, top-left over the camera. Height follows its content. */
+.feedback {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  gap: 12px;
+  width: min(300px, calc(100% - 32px));
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.75);
+}

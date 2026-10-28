@@ -1,0 +1,7 @@
+# Captured photos stay local
+data/raw/*
+!data/raw/README.md
+
+# Python
+.venv/
+__pycache__/
