@@ -28,7 +28,7 @@ LANDMARK_COUNT = 21
 PALM_LANDMARK_IDS = (0, 5, 9, 13, 17)
 AXES = ("x", "y", "z")
 DEFAULT_GROUND_TRUTH_ROOT = (
-    Path(__file__).resolve().parent.parent / "data" / "ground_truth"
+    Path(__file__).resolve().parent / "ground_truth_letters"
 )
 
 
@@ -144,7 +144,7 @@ def load_ground_truth(
     ground_truth_root: str | Path = DEFAULT_GROUND_TRUTH_ROOT,
 ) -> dict[str, Any]:
     letter = _validated_letter(letter)
-    path = Path(ground_truth_root) / letter / f"ground_truth_{letter}.json"
+    path = Path(ground_truth_root) / f"ground_truth_{letter}.json"
     try:
         with path.open(encoding="utf-8") as file:
             payload = json.load(file)

@@ -8,8 +8,8 @@ Required:
 
 - Python 3.10 or newer
 - GNU Make
-- The project data directory with the canonical files:
-  `data/ground_truth/<LETTER>/ground_truth_<LETTER>.json`
+- The committed `ground_truth_letters/` directory with the canonical files:
+  `ground_truth_letters/ground_truth_<LETTER>.json`
 - WSL is recommended when running on Windows because the Makefile uses
   Unix-style commands such as `rm`.
 
@@ -157,9 +157,9 @@ landmarks or coordinates that already use equal axis units.
 Only the canonical single-letter ground-truth files are intended to be saved:
 
 ```text
-data/ground_truth/A/ground_truth_A.json
+backend/ground_truth_letters/ground_truth_A.json
 ...
-data/ground_truth/Z/ground_truth_Z.json
+backend/ground_truth_letters/ground_truth_Z.json
 ```
 
 The model, training data, ground-truth source files, generated sample sets,

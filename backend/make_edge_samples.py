@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 BACKEND = Path(__file__).resolve().parent
-GROUND_TRUTH = BACKEND.parent / "data" / "ground_truth"
+GROUND_TRUTH = BACKEND / "ground_truth_letters"
 OUTPUT = BACKEND / "edge_samples"
 SEVERE_OUTPUT = BACKEND / "severe_samples"
 PALM_IDS = (0, 5, 9, 13, 17)
@@ -84,7 +84,7 @@ def make_sample(
             x = 2 * center[0] - x
         points.append({**point, "x": x, "y": y, "z": z})
     result["normalized_landmarks"] = points
-    result["source_ground_truth"] = f"data/ground_truth/{letter}/ground_truth_{letter}.json"
+    result["source_ground_truth"] = f"backend/ground_truth_letters/ground_truth_{letter}.json"
     return result
 
 
@@ -126,7 +126,7 @@ def main() -> None:
         existing.unlink()
     for code in range(ord("A"), ord("Z") + 1):
         letter = chr(code)
-        path = GROUND_TRUTH / letter / f"ground_truth_{letter}.json"
+        path = GROUND_TRUTH / f"ground_truth_{letter}.json"
         with path.open(encoding="utf-8") as file:
             payload = json.load(file)
         cases = {
