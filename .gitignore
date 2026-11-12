@@ -1,0 +1,44 @@
+# Generated outputs and local development artifacts
+/backend/output/
+/backend/sample_sets/
+/backend/edge_samples/
+/backend/severe_samples/
+/backend/__pycache__/
+/backend/comparison.svg
+
+# Local models and dataset archives
+/hand_landmarker.task
+/data/training_set/
+/data/training_set.zip
+/data/ground_truth.zip
+
+# Keep the full source ground-truth dataset local; only the committed copies
+# under backend/ground_truth_letters/ are used by the normalizer.
+/data/ground_truth/
+/backend/ground_truth_letters/*
+!/backend/ground_truth_letters/ground_truth_A.json
+!/backend/ground_truth_letters/ground_truth_B.json
+!/backend/ground_truth_letters/ground_truth_C.json
+!/backend/ground_truth_letters/ground_truth_D.json
+!/backend/ground_truth_letters/ground_truth_E.json
+!/backend/ground_truth_letters/ground_truth_F.json
+!/backend/ground_truth_letters/ground_truth_G.json
+!/backend/ground_truth_letters/ground_truth_H.json
+!/backend/ground_truth_letters/ground_truth_I.json
+!/backend/ground_truth_letters/ground_truth_J.json
+!/backend/ground_truth_letters/ground_truth_K.json
+!/backend/ground_truth_letters/ground_truth_L.json
+!/backend/ground_truth_letters/ground_truth_M.json
+!/backend/ground_truth_letters/ground_truth_N.json
+!/backend/ground_truth_letters/ground_truth_O.json
+!/backend/ground_truth_letters/ground_truth_P.json
+!/backend/ground_truth_letters/ground_truth_Q.json
+!/backend/ground_truth_letters/ground_truth_R.json
+!/backend/ground_truth_letters/ground_truth_S.json
+!/backend/ground_truth_letters/ground_truth_T.json
+!/backend/ground_truth_letters/ground_truth_U.json
+!/backend/ground_truth_letters/ground_truth_V.json
+!/backend/ground_truth_letters/ground_truth_W.json
+!/backend/ground_truth_letters/ground_truth_X.json
+!/backend/ground_truth_letters/ground_truth_Y.json
+!/backend/ground_truth_letters/ground_truth_Z.json
